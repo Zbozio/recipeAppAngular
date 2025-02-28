@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Recipe"
+        [(ngModel)]="query"
+      />
+      <button (click)="searchRecipes(query)">Search Recipe</button>
+      <div class="recipe-list">
+        <div class="recipe-item" *ngFor="let recipe of recipes">
+          <p>{{ recipe.title }}</p>
+          <img [src]="recipe.image" alt="{{ recipe.title }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

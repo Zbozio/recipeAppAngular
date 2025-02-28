@@ -1,0 +1,87 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(
+    282deg,
+    #f8f3e5,
+    #f9f4e3
+  ); /* Jasne, przyjazne tło z odcieniami beżu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+
+  .row {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0; /* Neutralny beżowy odcień, pasujący do reszty kolorów */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    background-color: #ff7043; /* Ciepły pomarańczowy, pasujący do kuchni */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #ff5722; /* Ciemniejszy pomarańczowy przy hoverze */
+      transform: scale(1.05);
+    }
+  }
+
+  .recipe-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .recipe-item {
+    background: #fff4e1; /* Delikatny, ciepły odcień żółtego */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #6b4f31; /* Ciepły brązowy kolor tekstu, który pasuje do jedzenia */
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+}
