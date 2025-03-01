@@ -9,7 +9,12 @@
       />
       <button (click)="searchRecipes(query)">Search Recipe</button>
       <div class="recipe-list">
-        <div class="recipe-item" *ngFor="let recipe of recipes">
+        <div
+          class="recipe-item"
+          *ngFor="let recipe of recipes"
+          [routerLink]="['/bookDetails', recipe.id]"
+          [queryParams]="{ id: recipe.id }"
+        >
           <p>{{ recipe.title }}</p>
           <img [src]="recipe.image" alt="{{ recipe.title }}" />
         </div>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { query } from 'express';
 import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,11 @@ export class RecipeService {
   getRecipes(query: string) {
     return this.http.get(
       `${this.API_URL}/complexSearch?query=${query}&apiKey=${this.API_KEY}`
+    );
+  }
+  getRecipeDetails(id: string) {
+    return this.http.get(
+      `${this.API_URL}/${id}/information?apiKey=${this.API_KEY}`
     );
   }
 }

@@ -1,1 +1,4 @@
-<p>repice-details works!</p>
+<div class="container" *ngIf="recipe">
+  <h1>{{ recipe.title }}</h1>
+  <img [src]="recipe.image" alt="{{ recipe.title }}" />
+</div>
