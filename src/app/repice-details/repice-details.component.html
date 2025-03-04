@@ -1,4 +1,15 @@
 <div class="container" *ngIf="recipe">
-  <h1>{{ recipe.title }}</h1>
-  <img [src]="recipe.image" alt="{{ recipe.title }}" />
+  <div class="recipe">
+    <p class="title">{{ recipe.title }}</p>
+    <img
+      class="recipe-Image"
+      style="border-radius: 15px"
+      [src]="recipe.image"
+      alt="{{ recipe.title }}"
+    />
+  </div>
+  <div class="instruction">
+    <h2>Instructions</h2>
+    <div [innerHTML]="recipe.instructions"></div>
+  </div>
 </div>

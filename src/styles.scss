@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 html {
   height: 100%;
-  background-color: rgb(184, 184, 184);
+  background-color: rgb(30, 113, 30);
+  font-family: "Poppins", sans-serif;
 }
+html {
+  font-family: poppins;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Lora:wght@400;700&display=swap");
