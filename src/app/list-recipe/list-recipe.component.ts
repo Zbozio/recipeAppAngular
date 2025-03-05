@@ -19,7 +19,12 @@ export class ListRecipeComponent implements OnInit {
   favoriteRecipes: Recipe[] = [];
   constructor(private recipeService: RecipeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const favoriteRecipes = localStorage.getItem('Favorite recipes');
+    if (favoriteRecipes) {
+      this.favoriteRecipes = JSON.parse(favoriteRecipes);
+    }
+  }
   searchRecipes(query: string) {
     this.recipeService.getRecipes(query).subscribe((data: any) => {
       this.recipes = data.results;
@@ -27,6 +32,9 @@ export class ListRecipeComponent implements OnInit {
   }
   favoriteRecipe(recipe: Recipe) {
     this.favoriteRecipes.push(recipe);
+    this.saveFavoriteRecipes();
+  }
+  saveFavoriteRecipes() {
     localStorage.setItem(
       'Favorite recipes',
       JSON.stringify(this.favoriteRecipes)
