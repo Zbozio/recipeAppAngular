@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 export class ListRecipeComponent implements OnInit {
   recipes: Recipe[] = [];
   query: string = '';
+  favoriteRecipes: Recipe[] = [];
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {}
@@ -23,5 +24,12 @@ export class ListRecipeComponent implements OnInit {
     this.recipeService.getRecipes(query).subscribe((data: any) => {
       this.recipes = data.results;
     });
+  }
+  favoriteRecipe(recipe: Recipe) {
+    this.favoriteRecipes.push(recipe);
+    localStorage.setItem(
+      'Favorite recipes',
+      JSON.stringify(this.favoriteRecipes)
+    );
   }
 }

@@ -8,6 +8,12 @@
       alt="{{ recipe.title }}"
     />
   </div>
+  <p class="title2">Diets:</p>
+  <p>{{ recipe.diets }}</p>
+  <p class="title2">Dish types:</p>
+  <p>{{ recipe.dishTypes }}</p>
+  <p class="title2">Preparation time:</p>
+  <p>{{ recipe.readyInMinutes }}</p>
   <div class="instruction">
     <h2>Instructions</h2>
     <div [innerHTML]="recipe.instructions"></div>

@@ -1,77 +1,95 @@
 body {
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
   color: #333;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+}
+.recipe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
-  }
 }
 
-.recipe {
-  text-align: center;
-  padding: 20px;
-
-  .title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-
-  .recipe-Image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
-    }
-  }
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.instruction {
+.title,
+.title2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.recipe-Image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-Image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.instruction h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #34495e;
   margin-top: 30px;
+}
 
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #555;
-    margin-bottom: 15px;
+.instruction div {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  padding: 10px 20px;
+  background: #ecf0f1;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+ol,
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
   }
 
-  p,
-  ol,
-  li {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-  }
-
-  ol {
-    padding-left: 20px;
-  }
-
-  li {
-    margin-bottom: 10px;
+  .title,
+  .title2 {
+    font-size: 1.5rem;
   }
 }

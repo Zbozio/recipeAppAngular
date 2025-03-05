@@ -17,6 +17,9 @@
         >
           <p>{{ recipe.title }}</p>
           <img [src]="recipe.image" alt="{{ recipe.title }}" />
+          <button (click)="favoriteRecipe(recipe)" style="margin-top: 10px">
+            Ulubione
+          </button>
         </div>
       </div>
     </div>

@@ -5,4 +5,7 @@ export interface Recipe {
   instructions: string;
   vegan: boolean;
   servings: number;
+  diets: string[];
+  dishTypes: string[];
+  readyInMinutes: number;
 }
