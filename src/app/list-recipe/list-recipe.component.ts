@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Recipe } from '../recipe.model';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { set } from '@microsoft/sp-lodash-subset';
 
 @Component({
   selector: 'app-list-recipe',
@@ -17,6 +18,7 @@ export class ListRecipeComponent implements OnInit {
   recipes: Recipe[] = [];
   query: string = '';
   favoriteRecipes: Recipe[] = [];
+  isLoading: boolean = false;
   constructor(private recipeService: RecipeService) {}
 
   ngOnInit(): void {
@@ -26,9 +28,13 @@ export class ListRecipeComponent implements OnInit {
     }
   }
   searchRecipes(query: string) {
-    this.recipeService.getRecipes(query).subscribe((data: any) => {
-      this.recipes = data.results;
-    });
+    this.isLoading = true;
+    setTimeout(() => {
+      this.recipeService.getRecipes(query).subscribe((data: any) => {
+        this.recipes = data.results;
+        this.isLoading = false;
+      });
+    }, 500);
   }
   favoriteRecipe(recipe: Recipe) {
     this.favoriteRecipes.push(recipe);

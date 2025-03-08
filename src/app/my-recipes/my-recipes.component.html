@@ -1,7 +1,15 @@
 <div class="container">
-  <div class="recipe" *ngFor="let recipe of favoriteRecipes">
-    <p class="title">{{ recipe.title }}</p>
-    <img class="recipe-Image" [src]="recipe.image" alt="{{ recipe.title }}" />
-    <button class="delete-button">Usuń przepis</button>
+  <div
+    class="recipe-card"
+    *ngFor="let recipe of favoriteRecipes; let i = index"
+    [routerLink]="['/bookDetails', recipe.id]"
+  >
+    <img class="recipe-image" [src]="recipe.image" alt="{{ recipe.title }}" />
+    <div class="recipe-content">
+      <p class="recipe-title">{{ recipe.title }}</p>
+      <button (click)="removeRecipe(i)" class="delete-button">
+        Delete recipe
+      </button>
+    </div>
   </div>
 </div>

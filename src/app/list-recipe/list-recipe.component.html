@@ -7,8 +7,10 @@
         placeholder="Search Recipe"
         [(ngModel)]="query"
       />
+
       <button (click)="searchRecipes(query)">Search Recipe</button>
-      <div class="recipe-list">
+      <div *ngIf="isLoading" class="spinner"></div>
+      <div *ngIf="!isLoading" class="recipe-list">
         <div
           class="recipe-item"
           *ngFor="let recipe of recipes"
