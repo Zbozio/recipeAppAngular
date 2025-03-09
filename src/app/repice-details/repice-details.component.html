@@ -13,7 +13,18 @@
   <p class="title2">Dish types:</p>
   <p>{{ recipe.dishTypes }}</p>
   <p class="title2">Preparation time:</p>
-  <p>{{ recipe.readyInMinutes }}</p>
+  <p>{{ recipe.readyInMinutes }} minutes</p>
+  <p class="title2">Diets:</p>
+  <p>{{ recipe.diets }}</p>
+  <p class="title2">Ingredients:</p>
+  <ul>
+    <li
+      class="ingredient"
+      *ngFor="let ingredient of recipe.extendedIngredients"
+    >
+      {{ ingredient.name }}
+    </li>
+  </ul>
   <div class="instruction">
     <h2>Instructions</h2>
     <div [innerHTML]="recipe.instructions"></div>

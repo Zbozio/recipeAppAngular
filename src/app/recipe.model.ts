@@ -8,4 +8,8 @@ export interface Recipe {
   diets: string[];
   dishTypes: string[];
   readyInMinutes: number;
+  extendedIngredients: {
+    id: number;
+    name: string;
+  }[];
 }
