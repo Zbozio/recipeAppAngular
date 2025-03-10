@@ -1,27 +1,9 @@
 # RecipeAppAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+![recipe](https://github.com/user-attachments/assets/9712712b-a613-42d1-ac2c-dcf2e83935c5)
+This culinary application, developed in Angular, offers a seamless experience for searching recipes through an external API. Users can enter keywords to discover meal inspiration, view detailed recipe information such as ingredients, preparation time, and dietary types. Each recipe can be added to favorites, with all saved recipes stored in LocalStorage to remain accessible even after refreshing the page.
+![list-recipe](https://github.com/user-attachments/assets/94b46e02-2e2b-444f-bb73-0feb84ccb708)
+![favorites](https://github.com/user-attachments/assets/991f9132-af63-4f14-b688-65a9c2cae2d5)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
