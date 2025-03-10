@@ -5,7 +5,7 @@ import { RepiceDetailsComponent } from './repice-details/repice-details.componen
 import { MyRecipesComponent } from './my-recipes/my-recipes.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'listRecipe', pathMatch: 'full' },
+  { path: '', redirectTo: 'main-page', pathMatch: 'full' },
   { path: 'main-page', component: MainPageComponent },
   { path: 'listRecipe', component: ListRecipeComponent },
   { path: 'favorites', component: MyRecipesComponent },
